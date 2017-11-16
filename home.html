@@ -1,0 +1,109 @@
+<html>
+    <title>
+    ryland
+    </title>
+    <style>
+        input,h1,h2,form,p {
+            font-family: 'Courier New';
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 60;
+            font-style: italic;
+        }
+        input {
+            width: 200;
+            height: 40;
+            font-size: 16;
+        }
+        input.sh {
+            font-size: 13;
+        }
+      .wideInput{
+    text-align: left;
+    padding-left:0;
+    padding-top:0;
+    padding-bottom:0.4em;
+    padding-right: 0.4em;
+    width: 400px;
+    height: 200px;
+}
+    </style>
+    <body>
+        <center>
+            <h1>
+                RYLAND
+            </h1>
+            <p id="date"></p>
+            <iframe src="http://free.timeanddate.com/clock/i5yba948/n5239/fn8/ftb" frameborder="0" width="95" height="18"></iframe>
+            <h2>
+                bookmarks
+            </h2>
+            <div id="bookmarks">
+            <input type="button" onclick="location.href='https://www.reddit.com/';" value="Reddit" />
+            <input type="button" onclick="location.href='https://github.com/;" value="GitHub" />
+            <input type="button" onclick="location.href='https://sourceforge.net/';" value="SourceForge" />
+            <input type="button" onclick="location.href='https://v3rmillion.net/';" value="V3rmillion" />
+            <input type="button" onclick="location.href='https://mail.protonmail.com/login';" value="Protonmail" />
+            <input type="button" onclick="location.href='https://chrome.google.com/webstore/category/extensions';" value="Webstore" />
+            <input type="button" onclick="location.href='https://analytics.google.com/analytics/web/?authuser=0#management/Settings/a100780827w147766651p152604894/%3Fm.page%3DTrackingCode/';" value="Analytics" />
+            <input type="button" onclick="location.href='https://cryptii.com/text/select';" value="Cryptii" />
+            <input type="button" onclick="location.href='https://www.converto.io/en';" value="Converto" />
+            <input type="button" onclick="location.href='https://chrome.google.com/webstore/developer/dashboard';" value="Developer Dashboard" />
+            <input type="button" onclick="location.href='https://www.roblox.com/home';" value="Roblox" />
+            <input type="button" onclick="location.href='https://scriptinghelpers.org/';" value="Scripting Helpers" />
+            <input type="button" onclick="location.href='https://github.com/JMccormick264/PPAppsIPARepo';" value="++Apps" />
+            <input type="button" onclick="location.href='https://10minutemail.com/10MinuteMail/index.html?dswid=-2295';" value="10MinuteMail" />
+            <input type="button" onclick="location.href='https://drive.google.com/drive/u/0/';" value="Google Drive" />
+            <input type="button" onclick="location.href='https://app.grammarly.com/';" value="Grammarly" />
+            <input type="button" onclick="location.href='https://mail.google.com/';" value="Gmail" />
+            <input type="button" onclick="location.href='https://nh-pinkerton.myfollett.com/aspen/logon.do';" value="Pinkerton Aspen" />
+            </div>
+            <h2>
+                search
+            </h2>
+            <div id="searches">
+           <form method="get" action="http://www.google.com/search">
+<input type="text" id="goog"  name="q" size="25"
+maxlength="255" value="" />
+<input type="submit" value="Google Search" />
+</form>
+            <form method="get" action="https://scriptinghelpers.org/search?search= ">
+<input name="q" size="15"
+maxlength="255" value="" />
+<input class = "sh" type="submit" value="Scripting Helpers Search" />
+</form>
+            </div>
+            <div id="notes">
+            <h2>
+                notes
+                </h2>
+               <textarea class="wideInput" id="myData" ></textarea>
+                <br>
+                <button class="s" id="save">save</button>
+                 <button class="l" id="load">load</button>
+            </div>
+            <div id="spacer">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <input type="button" onclick="location.href='https://pornhub.com';" value="ph" />
+            <input type="button" onclick="location.href='https://xvideos.com';" value="xv" />
+            </div>
+        </center>
+    </body>
+     <script>
+    var d = new Date();
+         if(document.getElementById("date") && document.getElementById("time")) {
+    document.getElementById("date").innerHTML = d.toDateString();
+    document.getElementById("time").innerHTML = d.toTimeString();
+         }
+         if (document.getElementById("save") && document.getElementById("load") && document.getElementById("myData")){
+             var val = localStorage["val"]
+             document.querySelector('#save').addEventListener('click',function() {
+                val = document.getElementById("myData").value                                            
+           });
+         document.querySelector('#load').addEventListener('click',function(){
+                document.getElementById("myData").value = val                                           
+           });
+         }
+    </script>
+</html>
